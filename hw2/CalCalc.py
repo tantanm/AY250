@@ -22,7 +22,12 @@ def calcalc(inp):
         html=response.read()
         result= re.findall('<plaintext>(.*?)</plaintext>', html)
         print result
+def test():
+    assert(calcalc('3*4'))==12
 
+def test():
+    assert(calcalc('5+2'))==7
+    
 if __name__=="__main__":
     main()
 
